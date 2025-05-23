@@ -15,6 +15,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
       curl \
       x11vnc \
       winetricks \
+      aria2 \
+      unzip \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Create user and directories
