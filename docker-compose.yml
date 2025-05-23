@@ -1,15 +1,20 @@
+version: '3.8'
+
 services:
-  falconbms:
-    build: .
+  bmsserver:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: bmsserver:latest
     environment:
-      INSTALL_ON_START: "false"
-      STEAM_USER: ""
-      STEAM_PASS: ""
+      INSTALL_ON_START: "false"   # Set to "true" to force install on startup
+      # Uncomment and fill for Steam install:
+      # STEAM_USER: "your_steam_username"
+      # STEAM_PASS: "your_steam_password"
     volumes:
+      - ./installers:/home/bms/installers:ro
       - ./wine64:/home/bms/wine64
-      - ./installers:/home/bms/installers
     ports:
-      - "5900:5900"
       - "2934:2934/udp"
       - "2935:2935/udp"
       - "9987:9987/udp"
