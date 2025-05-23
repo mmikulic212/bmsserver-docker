@@ -1,0 +1,7 @@
+# .gitignore
+wine64/
+installers/
+*.exe
+*.log
+*.bak
+*.tmp
