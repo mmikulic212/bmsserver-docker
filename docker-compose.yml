@@ -12,7 +12,7 @@ services:
       # STEAM_USER: "your_steam_username"
       # STEAM_PASS: "your_steam_password"
     volumes:
-      - ./bmsdata:/home/bms
+      - ./bmsdata:/home/bms/wine64
       - ./installers:/home/bms/installers:ro
     ports:
       - "2934:2934/udp"
