@@ -1,0 +1,18 @@
+services:
+  falconbms:
+    build: .
+    environment:
+      INSTALL_ON_START: "false"
+      STEAM_USER: ""
+      STEAM_PASS: ""
+    volumes:
+      - ./wine64:/home/bms/wine64
+      - ./installers:/home/bms/installers
+    ports:
+      - "5900:5900"
+      - "2934:2934/udp"
+      - "2935:2935/udp"
+      - "9987:9987/udp"
+      - "9988:9988/udp"
+      - "9989:9989/udp"
+    restart: unless-stopped
