@@ -12,6 +12,7 @@ RUN dpkg --add-architecture i386 && \
         winetricks \
         aria2 \
         pulseaudio \
+        xvfb \
         x11vnc \
         fluxbox \
         xterm \

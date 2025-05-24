@@ -4,8 +4,8 @@ set -e
 export WINEPREFIX=/home/bms/wine64
 export DISPLAY=:1
 
-FALCON4_FLAG="$WINEPREFIX/.falcon4installed"
-BMS_FLAG="$WINEPREFIX/.bmsinstalled"
+FALCON4_FLAG="./.falcon4installed"
+BMS_FLAG="./.bmsinstalled"
 
 INSTALL_FLAG="${INSTALL_ON_START,,}"  # lowercase normalization
 
