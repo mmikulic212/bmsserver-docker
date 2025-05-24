@@ -7,7 +7,7 @@ services:
     environment:
       - STEAM_USER=${STEAM_USER:-}
       - STEAM_PASS=${STEAM_PASS:-}
-      - INSTALL_FALCON_ON_START=${INSTALL_FALCON_ON_START:-false}
+      - INSTALL_ON_START=${INSTALL_ON_START:-false}
       - WINEPREFIX=/home/bms/wineprefix
     volumes:
       - bms-data:/home/bms/wine64

@@ -4,15 +4,15 @@ set -e
 export WINEPREFIX=/home/bms/wine64
 export DISPLAY=:1
 
-FALCON4_DIR="$WINEPREFIX/drive_c/Program Files/Falcon 4.0"
-FALCONBMS_DIR="$WINEPREFIX/drive_c/Program Files/Falcon BMS"
+FALCON4_FLAG="$WINEPREFIX/.falcon4installed"
+BMS_FLAG="$WINEPREFIX/.bmsinstalled"
 
 INSTALL_FLAG="${INSTALL_ON_START,,}"  # lowercase normalization
 
 # Check if Falcon BMS and Falcon 4 are installed
 if [ "$INSTALL_FLAG" = "true" ] || \
-   [ ! -d "$FALCON4_DIR" ] || \
-   [ ! -d "$FALCONBMS_DIR" ]; then
+   [ ! -f "$FALCON4_FLAG" ] || \
+   [ ! -f "$BMS_FLAG" ]; then
   echo "Install required: INSTALL_ON_START=$INSTALL_ON_START or missing installation."
   /home/bms/install.sh
 else

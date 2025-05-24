@@ -36,6 +36,8 @@ fi
 #  fi
 #  echo "Installing Falcon 4 from $INSTALLER..."
 #  wine "$INSTALLER" /S
+#  touch "$WINEPREFIX/.falcon4installed"
+
 #fi
 #
 
@@ -50,5 +52,7 @@ fi
 #mkdir -p /home/bms/bms
 #cd /home/bms/bms
 #wine "$BMS_INSTALLER" /S
+#touch "$WINEPREFIX/.bmsinstalled"
+
 
 echo "Installation complete."
