@@ -8,6 +8,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
       wine64 \
       xvfb \
       fluxbox \
+      x11-apps \
+      xterm \
       supervisor \
       pulseaudio \
       wget \
