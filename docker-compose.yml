@@ -11,7 +11,7 @@ services:
       - WINEPREFIX=/home/bms/wineprefix
     volumes:
       - bms-data:/home/bms/wine64
-      - bms-installers:/home/bms/installers:ro
+      - ./installers:/home/bms/installers:ro
     ports:
       - "5900:5900" # x11vnc VNC port
       - "2934:2934/udp" # BMS MP 
@@ -25,4 +25,3 @@ services:
 
 volumes:
   bms-data:
-  bms-installers:
